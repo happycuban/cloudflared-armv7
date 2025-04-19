@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/happycuban/cloudflared-armv7/compare/v1.0.0...v1.0.1) (2025-04-19)
+
+
+### Bug Fixes
+
+* Add more architectures to image ([9e49a9d](https://github.com/happycuban/cloudflared-armv7/commit/9e49a9dcbfe82444fe36986db145dd2a082945a0))
+
 # 1.0.0 (2025-04-19)
 
 
