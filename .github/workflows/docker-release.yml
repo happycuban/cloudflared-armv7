@@ -41,8 +41,6 @@ jobs:
       
       - name: Build and Push Docker Image (Docker Hub)
         if: steps.semantic.outputs.new_release_published == 'true'
-        env:
-          VERSION: ${{ steps.semantic.outputs.new_release_version }}
         uses: docker/build-push-action@v5
         with:
           context: .
@@ -52,7 +50,7 @@ jobs:
           cache-to: type=gha,mode=max
           tags: |
             tekmodedk/cloudflared:latest
-            tekmodedk/cloudflared:v${VERSION}
+            tekmodedk/cloudflared:v${{ steps.semantic.outputs.new_release_version }}
 
       # - name: Build and Push Docker Image (Docker Hub + GHCR)
       #   if: steps.semantic.outputs.new_release_published == 'true'
